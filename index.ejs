@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    
+    <div class="flex">
+    <button class="Add-blog">
+        ADD BLOG
+    </button>
+   
+   
+    </div>
+        
+    <form class="add invisible " action="/add" method="post">
+    <div class="flex"><textarea id="title" name="Titlepost" rows="1" cols="100" required>Title</textarea></div>
+    <div class="flex"><textarea id="story" name="newpost" rows="20" cols="100" required>Text </textarea></div>
+    <br>
+    <div class="flex"><input type="submit" value="Submit"></div>
+
+    </form>
+     
+    <%if (locals.title){ title.forEach((tit)=>{ %>
+    <div class="flex">
+
+        <a href="/blog/<%= tit%>"><%= tit %></a></div>
+        <br>
+        <%  } ) } if (locals.title.length>0){ %>
+            <div class="flex">
+        <form action ="/delete" method="post"><div><input type="submit" value="DELETEALL"></div></form>
+        </div>
+                <% } %>
+            
+    
+    <script src="/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+html{
+    background-color: white;
+
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.invisible{
+display:none;    
+}
+
+#form-text{
+    height: 200px;
+    align-items: center;
+}
